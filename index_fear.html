@@ -210,9 +210,7 @@
       padding: 30px 20px; text-align: center; color: rgba(255,255,255,0.4); font-size: 11px;
     }
 
-    .fade-in { opacity: 1; transform: translateY(0); }
-    .js-ready .fade-in { opacity: 0; transform: translateY(15px); transition: opacity 0.8s ease, transform 0.8s ease; }
-    .js-ready .fade-in.visible { opacity: 1; transform: translateY(0); }
+    /* fade-in無効化（表示信頼性優先） */
 
     /* シェイクアニメーション */
     @keyframes shake {
@@ -720,12 +718,7 @@
     }, { threshold: 0.5 });
     document.querySelectorAll('.marker-yellow,.marker-red').forEach(el => markerObs.observe(el));
 
-    document.documentElement.classList.add('js-ready');
-
-    const fadeObs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+    /* fadeObserver削除済み */
 
     let shown = false;
     window.addEventListener('scroll', () => {
