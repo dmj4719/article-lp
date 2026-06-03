@@ -107,6 +107,11 @@
     .chat-name { font-size: 12px; color: #999; margin-bottom: 4px; padding-left: 4px; }
     .chat-name-right { text-align: right; padding-right: 4px; }
 
+    /* 画像注釈 */
+    .img-wrap { position: relative; margin: 20px 0; }
+    .img-wrap img { margin: 0; }
+    .img-note { position: absolute; bottom: 6px; right: 8px; font-size: 10px; color: rgba(255,255,255,0.7); text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+
     /* 画像プレースホルダー */
     .ph {
       width: 100%; display: flex; align-items: center; justify-content: center;
@@ -234,7 +239,7 @@
 
   <!-- ===== ヘッダー ===== -->
   <header class="article-header">
-    <img src="images_fear/01.jpg" alt="画像1" style="width:100%;display:block;">
+    <div class="img-wrap"><img src="images_fear/01.jpg" alt="画像1" style="width:100%;display:block;"><span class="img-note">※写真はイメージです</span></div>
   </header>
 
   <div class="article-meta">
@@ -258,13 +263,13 @@
         「みんなも老けてるかな」なんて、<br>ちょっと余裕ぶって参加した。
       </p>
 
-      <img src="images_fear/02.jpg" alt="画像2">
+      <div class="img-wrap"><img src="images_fear/02.jpg" alt="画像2"><span class="img-note">※写真はイメージです</span></div>
 
       <p>
         でも──会場に着いて、息を呑んだ。
       </p>
 
-      <img src="images_fear/03.jpg" alt="画像3">
+      <div class="img-wrap"><img src="images_fear/03.jpg" alt="画像3"><span class="img-note">※写真はイメージです</span></div>
 
       <p>
         学生の頃は<span class="text-bold">同じような顔立ち</span>だったはずの親友・A子。
@@ -282,7 +287,7 @@
         スマホのノーマルカメラに映り込んだ──<br><span class="text-bold">自分の顔。</span>
       </p>
 
-      <img src="images_fear/04.jpg" alt="画像4">
+      <div class="img-wrap"><img src="images_fear/04.jpg" alt="画像4"><span class="img-note">※写真はイメージです</span></div>
 
       <p>
         くっきり刻まれたほうれい線。<br>二重顎。<br>横から見たフェイスラインの崩れ。<br>──<span class="text-bold">化粧じゃ、絶対ごまかせない。</span>
@@ -297,7 +302,7 @@
         綺麗に年を重ねている同級生ばかり。
       </p>
 
-      <img src="images_fear/05.jpg" alt="画像5">
+      <div class="img-wrap"><img src="images_fear/05.jpg" alt="画像5"><span class="img-note">※写真はイメージです</span></div>
 
       <div class="fear-subtle">
         <span class="text-red text-large">「この中で私だけ<br>フェイスラインが崩れてる…？」</span>
@@ -318,7 +323,7 @@
         <span class="text-bold">「このままじゃ、5年後の同窓会なんて絶対ムリ」</span>
       </p>
 
-      <img src="images_fear/06.jpg" alt="画像6">
+      <div class="img-wrap"><img src="images_fear/06.jpg" alt="画像6"><span class="img-note">※写真はイメージです</span></div>
 
       <p>
         恐怖に駆られた私は、A子をトイレに引き込んだ。
@@ -339,7 +344,7 @@
         </div>
       </div>
 
-      <img src="images_fear/07.jpg" alt="画像7">
+      <div class="img-wrap"><img src="images_fear/07.jpg" alt="画像7"><span class="img-note">※写真はイメージです</span></div>
 
       <p>
         それを聞いて、絶望した。
@@ -353,7 +358,7 @@
         仕事に追われて、自分のためだけにお金も時間も割けない。
       </p>
 
-      <img src="images_fear/08.jpg" alt="画像8">
+      <div class="img-wrap"><img src="images_fear/08.jpg" alt="画像8"><span class="img-note">※写真はイメージです</span></div>
 
       <p class="text-center">
         A子のようにフェイスラインをキープするのは、<br><span class="text-bold">もう無理なのかもしれない。</span>
@@ -410,7 +415,7 @@
         </div>
       </div>
 
-      <img src="images_fear/11.jpg" alt="画像11">
+      <div class="img-wrap"><img src="images_fear/11.jpg" alt="画像11"><span class="img-note">※写真はイメージです</span></div>
 
       <div class="point-card fade-in">
         <div class="point-icon">🔥</div>
@@ -421,7 +426,7 @@
         </div>
       </div>
 
-      <img src="images_fear/12.jpg" alt="画像12">
+      <div class="img-wrap"><img src="images_fear/12.jpg" alt="画像12"><span class="img-note">※写真はイメージです</span></div>
 
       <div class="point-card fade-in">
         <div class="point-icon">✨</div>
@@ -440,7 +445,7 @@
         </div>
       </div>
 
-      <img src="images_fear/13.jpg" alt="画像13">
+      <div class="img-wrap"><img src="images_fear/13.jpg" alt="画像13"><span class="img-note">※写真はイメージです</span></div>
 
       <p class="text-center">
         <span class="text-bold">週2回、たった8分。</span><br>
@@ -516,13 +521,13 @@
         <span class="text-bold">「おうちエステ」がスタートした。</span>
       </p>
 
-      <img src="images_fear/16.jpg" alt="画像16">
+      <div class="img-wrap"><img src="images_fear/16.jpg" alt="画像16"><span class="img-note">※写真はイメージです</span></div>
 
       <p>
         わざわざ着替える必要もない。<br>ノーメイクのまま、ベッドの上でOK。
       </p>
 
-      <img src="images_fear/17.jpg" alt="画像17">
+      <div class="img-wrap"><img src="images_fear/17.jpg" alt="画像17"><span class="img-note">※写真はイメージです</span></div>
 
       <p>
         毎日続けるうちに──<br>
@@ -535,7 +540,7 @@
         半年後。再び集まった女子会。
       </p>
 
-      <img src="images_fear/18.jpg" alt="画像18">
+      <div class="img-wrap"><img src="images_fear/18.jpg" alt="画像18"><span class="img-note">※写真はイメージです</span></div>
 
       <p>
         今度は──<span class="text-bold">私が聞かれる番だった。</span>
@@ -548,7 +553,7 @@
         </div>
       </div>
 
-      <img src="images_fear/19.jpg" alt="画像19">
+      <div class="img-wrap"><img src="images_fear/19.jpg" alt="画像19"><span class="img-note">※写真はイメージです</span></div>
 
       <p class="text-center" style="margin:25px 0;">
         <span class="text-bold text-large">「私だけフェイスラインが崩れてる」<br>あの日の恐怖は、もうない。</span>
@@ -628,7 +633,7 @@
         <div class="point-desc">テレビ見ながらでOK！</div>
       </div>
 
-      <img src="images_fear/24.jpg" alt="画像24">
+      <div class="img-wrap"><img src="images_fear/24.jpg" alt="画像24"><span class="img-note">※写真はイメージです</span></div>
 
       <div class="point-card">
         <div class="point-icon">3</div>
@@ -636,7 +641,7 @@
         <div class="point-desc">オートOFFで勝手に終了。週2回でOK</div>
       </div>
 
-      <img src="images_fear/25.jpg" alt="画像25">
+      <div class="img-wrap"><img src="images_fear/25.jpg" alt="画像25"><span class="img-note">※写真はイメージです</span></div>
     </section>
 
     <div class="section-divider">・・・</div>
