@@ -395,7 +395,7 @@
         </div>
       </div>
 
-      <img src="images_fear/09.jpg" alt="画像9">
+      <img src="images_fear/09.jpg" alt="画像9" id="triggerCta">
 
       <p class="text-center">
         A子が教えてくれたのが<br>
@@ -763,14 +763,15 @@
 
     /* fadeObserver削除済み */
 
-    let shown = false;
-    window.addEventListener('scroll', () => {
-      if (shown) return;
-      if (window.scrollY / (document.body.scrollHeight - window.innerHeight) > 0.2) {
-        document.getElementById('fixedCta').style.display = 'block';
-        shown = true;
-      }
-    });
+    const ctaObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          document.getElementById('fixedCta').style.display = 'block';
+          ctaObs.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+    ctaObs.observe(document.getElementById('triggerCta'));
 
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('copy', e => e.preventDefault());
