@@ -1,6 +1,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
+    /* ecforceのサイトヘッダー・フッターを非表示 */
+    header.site-header, .site-header, #shopify-section-header,
+    footer.site-footer, .site-footer, #shopify-section-footer,
+    .header-wrapper, .footer-wrapper,
+    .announcement-bar, .announcement-bar-section { display: none !important; }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
