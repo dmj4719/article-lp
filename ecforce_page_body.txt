@@ -2,7 +2,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
     /* ecforceのサイトヘッダー・フッターを非表示 */
-    .c-announce_bar, .l-header__inner, .ecf_footer_section { display: none !important; }
+    .c-announce_bar, .l-header__inner, .l-footer { display: none !important; }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
