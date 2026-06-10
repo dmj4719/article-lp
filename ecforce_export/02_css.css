@@ -1,0 +1,212 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Zen Maru Gothic', 'Noto Sans JP', sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #444;
+  background: #fef9f4;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+.article-header { background: #fff; max-width: 620px; margin: 0 auto; }
+.article-meta {
+  max-width: 620px; margin: 0 auto; background: #fff;
+  padding: 10px 20px; display: flex; align-items: center; gap: 10px;
+  border-bottom: 1px solid #f0e0d0;
+}
+.article-meta .category { background: #e8836b; color: #fff; font-size: 11px; padding: 3px 12px; border-radius: 20px; font-weight: 700; }
+.article-meta .date { font-size: 12px; color: #aaa; }
+.article-title-area { max-width: 620px; margin: 0 auto; background: #fff; padding: 18px 20px 20px; }
+.article-title-area h1 {
+  font-size: 21px; font-weight: 700; line-height: 1.6; color: #333;
+}
+
+.article-body {
+  max-width: 620px; margin: 0 auto; padding: 25px 20px 40px; background: #fff;
+}
+.article-body p { margin-bottom: 20px; text-align: center; }
+.chat p, .chat .chat-bubble, .voice-box p, .note-box p { text-align: left; }
+.point-card .point-desc { text-align: center; }
+.article-body img { max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 8px; }
+
+.section-divider { text-align: center; margin: 28px 0; color: #e8836b; font-size: 20px; letter-spacing: 6px; }
+
+/* 見出し */
+.section-heading {
+  font-size: 20px; font-weight: 700; color: #333; line-height: 1.6;
+  margin-bottom: 18px; padding: 14px 18px;
+  background: linear-gradient(135deg, #fff5ee, #ffeee4);
+  border-radius: 10px; border-left: 4px solid #e8836b;
+}
+.section-heading-center {
+  text-align: center; border-left: none;
+  background: linear-gradient(135deg, #fff5ee, #ffeee4);
+}
+.section-heading-dark {
+  background: #3a2a2a; color: #fff; border-left-color: #ff6b6b;
+}
+
+/* マーカー */
+.marker-yellow {
+  background: linear-gradient(transparent 55%, #fff3a8 55%);
+  background-size: 200% 100%; background-position: right;
+  transition: background-position 1s ease-out;
+}
+.marker-yellow.animated { background-position: left; }
+.marker-red {
+  background: linear-gradient(transparent 55%, #ffcece 55%);
+  background-size: 200% 100%; background-position: right;
+  transition: background-position 1s ease-out;
+}
+.marker-red.animated { background-position: left; }
+
+.text-red { color: #e74c3c; font-weight: 700; }
+.text-orange { color: #e8836b; font-weight: 600; }
+.text-bold { font-weight: 700; }
+.text-large { font-size: 1.2em; }
+.text-xl { font-size: 1.4em; }
+.text-small { font-size: 0.85em; color: #aaa; line-height: 1.6; }
+.text-center { text-align: center; }
+
+/* 恐怖演出 */
+.fear-box {
+  background: #2d2226; color: #f0d0d0; padding: 22px 20px;
+  margin: 20px -20px; text-align: center; font-size: 18px; line-height: 1.8;
+}
+.fear-text {
+  font-size: 22px; font-weight: 700; color: #ff6b6b;
+  text-shadow: 0 0 20px rgba(255,107,107,0.3);
+}
+.fear-subtle {
+  background: #fff5f5; border: 2px dashed #ffb8b8; border-radius: 12px;
+  padding: 18px 20px; margin: 20px 0; text-align: center;
+}
+
+/* 吹き出し */
+.chat { margin: 20px 0; }
+.chat-bubble {
+  padding: 14px 18px; border-radius: 18px; margin-bottom: 12px;
+  font-size: 15px; line-height: 1.7; position: relative; max-width: 85%;
+}
+.chat-left .chat-bubble {
+  background: #f0f0f0; border-bottom-left-radius: 4px; margin-right: auto;
+}
+.chat-right .chat-bubble {
+  background: #e8836b; color: #fff; border-bottom-right-radius: 4px; margin-left: auto;
+}
+.chat-name { font-size: 12px; color: #999; margin-bottom: 4px; padding-left: 4px; }
+.chat-name-right { text-align: right; padding-right: 4px; }
+
+/* 画像注釈 */
+.img-wrap { position: relative; margin: 20px 0; }
+.img-wrap img { margin: 0; }
+.img-note { position: absolute; bottom: 6px; right: 8px; font-size: 10px; color: rgba(255,255,255,0.7); text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+
+/* 口コミ */
+.voice-box {
+  background: #fff9f5; border: 1px solid #f0e0d0; border-radius: 14px;
+  padding: 18px 20px; margin: 18px 0;
+}
+.voice-box .voice-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.voice-box .voice-icon {
+  width: 42px; height: 42px; border-radius: 50%; background: #ffeee4;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: #e8836b; flex-shrink: 0; font-weight: 700;
+}
+.voice-box .voice-name { font-size: 13px; color: #e8836b; font-weight: 600; }
+.voice-box .voice-stars { color: #f0b429; font-size: 13px; letter-spacing: 2px; }
+.voice-box p { font-size: 15px; line-height: 1.8; margin-bottom: 0; }
+
+/* ポイントカード */
+.point-card {
+  background: #fff; border: 2px solid #f0e0d0; border-radius: 14px;
+  padding: 20px; margin: 18px 0; text-align: center;
+}
+.point-card .point-icon { font-size: 30px; margin-bottom: 6px; }
+.point-card .point-title { font-size: 16px; font-weight: 700; color: #e8836b; margin-bottom: 8px; }
+.point-card .point-desc { font-size: 14px; line-height: 1.7; }
+
+/* 比較ボックス */
+.compare-box { display: flex; gap: 8px; margin: 20px 0; }
+.compare-item { flex: 1; padding: 16px 12px; border-radius: 12px; text-align: center; }
+.compare-before { background: #f5f0f0; border: 1px solid #e0d5d5; }
+.compare-after { background: #fff5ee; border: 2px solid #e8836b; }
+.compare-item .compare-label { font-size: 11px; font-weight: 700; color: #e8836b; margin-bottom: 6px; }
+.compare-item .compare-value { font-size: 20px; font-weight: 700; color: #333; }
+.compare-item .compare-value small { font-size: 13px; }
+.compare-item .compare-note { font-size: 11px; color: #999; margin-top: 4px; }
+
+/* 注釈 */
+.note-box {
+  background: #fff9f5; border: 1px solid #f0e0d0; border-radius: 10px;
+  padding: 15px 18px; margin: 20px 0; font-size: 14px; line-height: 1.7; color: #888;
+}
+
+/* スペック表 */
+.spec-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+.spec-table th { background: #e8836b; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; width: 35%; }
+.spec-table td { padding: 10px 14px; border-bottom: 1px solid #f0e0d0; background: #fff; }
+
+/* CTA */
+.cta-block {
+  text-align: center; margin: 28px 0; padding: 28px 15px;
+  background: linear-gradient(180deg, #fff5ee, #ffeee4);
+  margin-left: -20px; margin-right: -20px;
+  border-radius: 0;
+}
+.cta-block .cta-lead { font-size: 14px; color: #e8836b; margin-bottom: 6px; font-weight: 700; }
+.cta-block .cta-offer { font-size: 28px; font-weight: 700; color: #e74c3c; margin-bottom: 4px; }
+.cta-block .cta-offer small { font-size: 15px; font-weight: 400; }
+.cta-block .cta-price-note { font-size: 13px; color: #999; margin-bottom: 16px; }
+.cta-button {
+  display: block; width: 90%; max-width: 380px; margin: 0 auto 10px;
+  padding: 18px 20px; background: linear-gradient(to bottom, #ff7b6b, #e8534b);
+  color: #fff; text-align: center; font-size: 17px; font-weight: 700;
+  border-radius: 50px; text-decoration: none;
+  box-shadow: 0 4px 20px rgba(232, 83, 75, 0.35);
+  animation: popPulse 2s infinite;
+}
+.cta-button-sub { font-size: 11px; color: #999; margin-top: 4px; }
+@keyframes popPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(232, 83, 75, 0.35); }
+  50% { transform: scale(1.03); box-shadow: 0 6px 25px rgba(232, 83, 75, 0.5); }
+}
+
+/* 固定フッターCTA */
+.fixed-cta {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(50, 30, 30, 0.93); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  padding: 10px 15px 12px; text-align: center; z-index: 9999; display: none;
+  border-top: 2px solid #e8836b;
+}
+.fixed-cta a {
+  display: inline-block; width: 90%; max-width: 360px; padding: 14px 20px;
+  background: linear-gradient(to bottom, #ff7b6b, #e8534b); color: #fff;
+  font-size: 15px; font-weight: 700; border-radius: 50px; text-decoration: none;
+  animation: popPulse 2s infinite;
+}
+.fixed-cta .fixed-cta-note { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+.article-footer {
+  max-width: 620px; margin: 0 auto; background: #3a2a2a;
+  padding: 30px 20px; text-align: center; color: rgba(255,255,255,0.4); font-size: 11px;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+.shake { animation: shake 0.4s ease 1; }
+
+@media (min-width: 920px) {
+  .article-body, .article-header, .article-meta, .article-title-area { width: 620px; }
+}
+@media (max-width: 380px) {
+  body { font-size: 16px; }
+  .article-title-area h1 { font-size: 19px; }
+  .section-heading { font-size: 18px; }
+}
