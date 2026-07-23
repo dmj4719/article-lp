@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eito.ct様｜FC加盟店募集LP ワイヤーフレーム（構成案 v1）</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green-deep:#1E5C4C;      /* 信頼・メインカラー */
+  --green-mid:#3E8A6E;
+  --green-soft:#EAF4EE;      /* セクション背景 */
+  --gold:#C4862A;            /* 収益・数字の強調 */
+  --gold-deep:#A96F1B;
+  --cta:#E8813A;             /* CVボタン */
+  --cta-deep:#D06A24;
+  --ink:#2E3B36;
+  --ink-soft:#5C6B64;
+  --cream:#FBF9F4;
+  --alert:#C0554F;           /* 悩み・注意の赤（控えめ） */
+  --line:#DCE5DF;
+  --note-bg:#F1F0EC;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:"Noto Sans JP",sans-serif;
+  background:#E9E7E1;
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+/* ===== ドキュメントヘッダー ===== */
+.doc-head{
+  max-width:920px;margin:0 auto;padding:48px 24px 8px;
+}
+.doc-head h1{
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-size:22px;font-weight:900;color:var(--green-deep);
+  letter-spacing:.04em;
+}
+.doc-head .meta{font-size:12.5px;color:var(--ink-soft);margin-top:6px;}
+.doc-head .legend{
+  margin-top:14px;background:#fff;border:1px solid var(--line);
+  border-radius:10px;padding:14px 18px;font-size:12.5px;color:var(--ink-soft);
+}
+.doc-head .legend b{color:var(--ink);}
+.chip{display:inline-block;background:var(--green-deep);color:#fff;font-size:11px;
+  border-radius:999px;padding:1px 10px;margin-right:6px;vertical-align:1px;}
+/* ===== セクション注釈（LP外） ===== */
+.sec-label{
+  max-width:920px;margin:56px auto 0;padding:0 24px;
+}
+.sec-label .num{
+  font-family:"Zen Maru Gothic",sans-serif;font-weight:900;
+  color:#fff;background:var(--green-deep);border-radius:8px;
+  padding:3px 12px;font-size:13px;letter-spacing:.06em;display:inline-block;
+}
+.sec-label h2{font-size:15px;font-weight:700;display:inline-block;margin-left:10px;color:var(--ink);}
+.sec-label .purpose{font-size:12.5px;color:var(--ink-soft);margin-top:4px;}
+.note{
+  max-width:920px;margin:10px auto 0;padding:12px 18px;
+  background:var(--note-bg);border-left:4px solid #B9B6AD;border-radius:0 8px 8px 0;
+  font-size:12.5px;color:#565349;
+}
+.note b{color:#3d3a31;}
+/* ===== LPキャンバス ===== */
+.lp{
+  max-width:480px;margin:16px auto 0;background:#fff;
+  box-shadow:0 10px 40px rgba(30,60,50,.12);
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+.lp-sec{padding:44px 26px;}
+.bg-soft{background:var(--green-soft);}
+.bg-deep{background:var(--green-deep);color:#fff;}
+.bg-cream{background:var(--cream);}
+/* 見出し共通 */
+.eyebrow{
+  display:block;text-align:center;font-size:13px;font-weight:700;
+  color:var(--green-mid);letter-spacing:.22em;margin-bottom:10px;
+}
+h3.lp-h{
+  font-family:"Zen Maru Gothic",sans-serif;
+  text-align:center;font-size:24px;font-weight:900;line-height:1.5;
+  color:var(--green-deep);margin-bottom:26px;
+}
+h3.lp-h .u{
+  background:linear-gradient(transparent 62%, #F5D9A8 62%);
+  padding:0 2px;
+}
+.bg-deep h3.lp-h{color:#fff;}
+/* 写真プレースホルダ */
+.ph{
+  background:repeating-linear-gradient(45deg,#EDEDEA,#EDEDEA 12px,#E3E3DF 12px,#E3E3DF 24px);
+  border:1.5px dashed #B9B6AD;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  color:#8B887E;font-size:12px;font-weight:500;text-align:center;line-height:1.5;
+}
+/* CTA */
+.cta-wrap{padding:30px 26px;background:var(--green-soft);text-align:center;}
+.cta-micro{font-size:13px;font-weight:700;color:var(--green-deep);margin-bottom:10px;}
+.cta-btn{
+  display:block;background:linear-gradient(180deg,var(--cta),var(--cta-deep));
+  color:#fff;font-size:19px;font-weight:900;text-decoration:none;text-align:center;
+  border-radius:999px;padding:18px 10px;
+  box-shadow:0 5px 0 #A9541B, 0 10px 18px rgba(208,106,36,.35);
+  letter-spacing:.04em;
+}
+.cta-btn small{display:block;font-size:11.5px;font-weight:500;opacity:.92;letter-spacing:.1em;}
+.cta-sub{font-size:11.5px;color:var(--ink-soft);margin-top:10px;}
+/* ============ ①FV ============ */
+.fv{background:linear-gradient(165deg,#F3FAF6 0%, #E3F1E9 55%, #D8EAE0 100%);padding:38px 26px 34px;position:relative;}
+.recruit-ribbon{
+  text-align:center;font-family:"Zen Maru Gothic",sans-serif;
+  font-size:17px;font-weight:900;color:#fff;background:var(--green-deep);
+  border-radius:999px;padding:8px 10px;margin:0 30px 16px;letter-spacing:.12em;
+  box-shadow:0 4px 12px rgba(30,92,76,.25);
+}
+.fv h3.fv-copy .fc{color:var(--green-deep);}
+.fv-profit{
+  text-align:center;font-size:19px;font-weight:900;color:var(--ink);
+  font-family:"Zen Maru Gothic",sans-serif;margin:2px 0 4px;
+}
+.fv-profit .money{color:var(--gold);font-size:42px;letter-spacing:.02em;}
+.fv-profit .money .unit{font-size:24px;}
+.fv-profit .ast{font-size:12px;font-weight:500;color:var(--ink-soft);}
+.reason>div:last-child{flex:1;}
+.reason-ph{height:84px;margin-top:10px;}
+.work-ph{height:92px;margin-top:12px;}
+.work-cap{
+  margin-top:10px;background:var(--green-soft);border-radius:8px;
+  padding:10px 12px;font-size:12.5px;color:var(--ink);line-height:1.7;
+}
+.work-cap b{color:var(--green-deep);}
+.fv .badge3{
+  display:flex;gap:8px;justify-content:center;margin-bottom:18px;
+}
+.fv .badge3 span{
+  width:92px;height:92px;border-radius:50%;
+  background:#fff;border:2.5px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-size:10px;font-weight:700;color:var(--gold-deep);line-height:1.45;padding:8px;
+}
+.fv .lead{
+  text-align:center;font-size:14.5px;font-weight:700;color:var(--green-deep);letter-spacing:.05em;
+}
+.fv h3.fv-copy{
+  font-family:"Zen Maru Gothic",sans-serif;
+  text-align:center;font-weight:900;color:var(--ink);
+  font-size:26px;line-height:1.55;margin:10px 0 6px;
+}
+.fv h3.fv-copy .zero{
+  color:var(--green-deep);font-size:44px;letter-spacing:.02em;
+}
+.fv h3.fv-copy .money{
+  color:var(--gold);font-size:40px;
+}
+.fv h3.fv-copy .small{font-size:16px;font-weight:700;color:var(--ink-soft);}
+.fv .fv-note{text-align:center;font-size:10.5px;color:var(--ink-soft);}
+.fv .fv-points{
+  display:flex;gap:8px;justify-content:center;margin:18px 0 20px;flex-wrap:wrap;
+}
+.fv .fv-points span{
+  background:#fff;border:1.5px solid var(--green-mid);color:var(--green-deep);
+  font-size:12.5px;font-weight:700;border-radius:999px;padding:5px 14px;
+}
+.fv .ph{height:150px;margin-bottom:20px;}
+/* ============ ②悩み ============ */
+.worry-list{display:flex;flex-direction:column;gap:12px;margin-bottom:26px;}
+.worry{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:14px 16px 14px 46px;position:relative;font-size:14.5px;font-weight:500;
+  box-shadow:0 2px 6px rgba(30,60,50,.05);
+}
+.worry::before{
+  content:"✓";position:absolute;left:15px;top:12px;
+  color:var(--alert);font-weight:900;font-size:17px;
+}
+.worry b{color:var(--alert);}
+.worry-answer{
+  text-align:center;font-family:"Zen Maru Gothic",sans-serif;font-weight:900;
+  font-size:20px;color:var(--green-deep);line-height:1.6;
+}
+.worry-answer .big{font-size:26px;background:linear-gradient(transparent 62%,#F5D9A8 62%);}
+.arrow-down{
+  width:0;height:0;margin:18px auto;
+  border-left:26px solid transparent;border-right:26px solid transparent;
+  border-top:22px solid var(--green-mid);
+}
+/* ============ ③仕組み図解 ============ */
+.scheme{background:#fff;border:2px solid var(--green-mid);border-radius:14px;padding:22px 16px;}
+.scheme-row{display:flex;align-items:center;justify-content:space-between;gap:6px;}
+.scheme-box{
+  flex:1;background:var(--green-soft);border-radius:10px;padding:12px 6px;
+  text-align:center;font-size:12px;font-weight:700;color:var(--green-deep);line-height:1.5;
+}
+.scheme-box.you{background:var(--gold);color:#fff;box-shadow:0 3px 10px rgba(196,134,42,.35);}
+.scheme-arrow{font-size:16px;color:var(--green-mid);font-weight:900;}
+.scheme-cap{font-size:11px;color:var(--ink-soft);text-align:center;margin-top:12px;}
+.scheme-money{
+  text-align:center;margin-top:16px;font-size:14px;font-weight:700;
+}
+.scheme-money .y{color:var(--gold);font-size:22px;font-weight:900;}
+/* ============ ④理由 ============ */
+.reason{display:flex;gap:14px;background:#fff;border-radius:14px;padding:18px;margin-bottom:14px;
+  border:1px solid var(--line);box-shadow:0 3px 10px rgba(30,60,50,.06);}
+.reason .r-num{
+  flex-shrink:0;width:44px;height:44px;border-radius:50%;
+  background:var(--green-deep);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:19px;
+}
+.reason h4{font-size:16.5px;font-weight:900;color:var(--green-deep);line-height:1.5;margin-bottom:4px;}
+.reason h4 em{font-style:normal;color:var(--gold);}
+.reason p{font-size:13px;color:var(--ink-soft);}
+.reason p b{color:var(--ink);}
+/* ============ ⑤収益 ============ */
+.income-card{
+  background:#fff;border-radius:14px;border:1.5px solid var(--line);
+  padding:20px 18px;margin-bottom:16px;text-align:center;
+}
+.income-card .cond{
+  display:inline-block;background:var(--green-soft);color:var(--green-deep);
+  font-size:13px;font-weight:700;border-radius:999px;padding:4px 18px;margin-bottom:8px;
+}
+.income-card .val{font-size:15px;font-weight:700;}
+.income-card .val .n{color:var(--gold);font-size:38px;font-weight:900;font-family:"Zen Maru Gothic",sans-serif;letter-spacing:.02em;}
+.income-card .val .unit{color:var(--gold);font-size:20px;font-weight:900;}
+.income-card.top{border:2.5px solid var(--gold);position:relative;}
+.income-card.top::before{
+  content:"加盟店 過去最高実績";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:#fff;font-size:11.5px;font-weight:700;
+  border-radius:999px;padding:2px 16px;white-space:nowrap;
+}
+.income-note{font-size:10.5px;color:var(--ink-soft);text-align:center;}
+.graph-ph{height:170px;margin:6px 0 14px;}
+/* ============ ⑥仕事内容 ============ */
+.work3{display:flex;flex-direction:column;gap:12px;}
+.work{border-radius:14px;padding:18px;border:1px solid var(--line);background:#fff;position:relative;}
+.work .tag{
+  display:inline-block;font-size:11.5px;font-weight:900;border-radius:6px;padding:2px 10px;margin-bottom:6px;
+}
+.work.hq .tag{background:#E4E9E7;color:var(--ink-soft);}
+.work.you .tag{background:var(--gold);color:#fff;}
+.work h4{font-size:16px;font-weight:900;color:var(--ink);}
+.work.hq h4{color:var(--ink-soft);text-decoration:line-through;text-decoration-color:rgba(192,85,79,.6);text-decoration-thickness:2.5px;}
+.work p{font-size:13px;color:var(--ink-soft);margin-top:4px;}
+.work p b{color:var(--green-deep);}
+.work.you{border:2px solid var(--gold);background:#FDF8EF;}
+.time-badge{
+  position:absolute;top:16px;right:16px;background:var(--green-deep);color:#fff;
+  font-size:10.5px;font-weight:700;border-radius:999px;padding:3px 10px;
+}
+.work-sum{
+  margin-top:20px;text-align:center;font-family:"Zen Maru Gothic",sans-serif;
+  font-weight:900;font-size:19px;color:var(--green-deep);line-height:1.6;
+}
+.work-sum .n{font-size:30px;color:var(--gold);}
+/* ============ ⑦案件例 ============ */
+.case{background:#fff;border-radius:14px;border:1px solid var(--line);padding:18px;margin-bottom:14px;}
+.case .c-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+.case .c-icon{width:40px;height:40px;border-radius:10px;background:var(--green-soft);
+  display:flex;align-items:center;justify-content:center;font-size:20px;}
+.case h4{font-size:16px;font-weight:900;color:var(--green-deep);}
+.case p{font-size:13px;color:var(--ink-soft);}
+.case .c-pay{margin-top:8px;font-size:13px;font-weight:700;background:#FDF6EA;border-radius:8px;padding:8px 12px;}
+.case .c-pay b{color:var(--gold-deep);font-size:16px;}
+.case-total{
+  text-align:center;margin-top:8px;font-weight:900;font-size:17px;color:var(--green-deep);
+  font-family:"Zen Maru Gothic",sans-serif;
+}
+.case-total .n{font-size:28px;color:var(--gold);}
+.case-total small{display:block;font-size:11px;color:var(--ink-soft);font-weight:500;font-family:"Noto Sans JP";}
+/* --- 案件カルーセル --- */
+.carousel-hint{text-align:center;font-size:11.5px;color:var(--ink-soft);margin-bottom:10px;}
+.carousel{
+  display:flex;gap:14px;overflow-x:auto;padding:4px 2px 14px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+}
+.carousel::-webkit-scrollbar{height:6px;}
+.carousel::-webkit-scrollbar-track{background:#E6EEE9;border-radius:99px;}
+.carousel::-webkit-scrollbar-thumb{background:var(--green-mid);border-radius:99px;}
+.jcard{
+  flex:0 0 258px;scroll-snap-align:start;background:#fff;border-radius:16px;
+  border:1px solid var(--line);box-shadow:0 4px 14px rgba(30,60,50,.08);
+  overflow:hidden;display:flex;flex-direction:column;
+}
+.jcard-img{position:relative;height:120px;}
+.jcard-img .ph{height:100%;border-radius:0;border:none;border-bottom:1.5px dashed #B9B6AD;}
+.jcard-badge{
+  position:absolute;top:10px;left:10px;background:var(--gold);color:#fff;
+  font-size:11px;font-weight:900;border-radius:8px;padding:3px 10px;
+  box-shadow:0 2px 6px rgba(0,0,0,.18);
+}
+.jcard-badge.bl{background:var(--green-deep);}
+.jcard-feature{
+  position:absolute;bottom:10px;left:10px;background:rgba(46,59,54,.85);color:#fff;
+  font-size:10.5px;font-weight:700;border-radius:6px;padding:2px 9px;
+}
+.jcard-body{padding:14px 14px 16px;display:flex;flex-direction:column;flex:1;}
+.jcard-title{font-size:14px;font-weight:900;color:var(--ink);line-height:1.55;margin-bottom:10px;}
+.jrow{
+  display:flex;gap:8px;border-top:1px solid #EEF2EF;padding:7px 0;font-size:11.5px;
+}
+.jrow .k{flex:0 0 58px;color:#96A19B;font-weight:700;}
+.jrow .v{flex:1;color:var(--ink);font-weight:500;line-height:1.5;}
+.jrow .v.pay{color:var(--gold-deep);font-weight:900;font-size:14px;}
+.jtags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:10px;}
+.jtags span{
+  background:var(--green-soft);color:var(--green-deep);font-size:10.5px;font-weight:700;
+  border-radius:6px;padding:3px 9px;
+}
+/* ============ ⑧IT不安 ============ */
+.it-need{display:flex;gap:12px;justify-content:center;margin-bottom:18px;}
+.it-need div{
+  background:#fff;border-radius:12px;border:1.5px solid var(--green-mid);
+  width:120px;padding:16px 8px;text-align:center;font-weight:900;color:var(--green-deep);font-size:15px;
+}
+.it-need div small{display:block;font-size:10.5px;font-weight:500;color:var(--ink-soft);margin-top:2px;}
+.it-copy{text-align:center;font-size:14.5px;line-height:2;}
+.it-copy .big{font-size:19px;font-weight:900;color:var(--green-deep);}
+.lecture{
+  margin-top:18px;background:#fff;border-radius:12px;padding:16px;border:1px solid var(--line);
+  font-size:13px;text-align:center;
+}
+.lecture b{color:var(--gold-deep);font-size:16px;}
+/* ============ ⑨加盟店の声 ============ */
+.voice{background:#fff;border-radius:14px;border:1px solid var(--line);padding:18px;margin-bottom:14px;}
+.voice-head{display:flex;gap:12px;align-items:center;margin-bottom:10px;}
+.voice-head .ph{width:60px;height:60px;border-radius:50%;flex-shrink:0;}
+.voice-head .who{font-size:12.5px;color:var(--ink-soft);}
+.voice-head .who b{display:block;font-size:14.5px;color:var(--ink);}
+.voice-head .who .res{color:var(--gold-deep);font-weight:700;}
+.voice p{font-size:13px;}
+.voice p b{background:linear-gradient(transparent 62%,#F5D9A8 62%);}
+/* ============ ⑩代表 ============ */
+.ceo{display:flex;gap:16px;align-items:flex-start;margin-bottom:16px;}
+.ceo .ph{width:120px;height:150px;flex-shrink:0;}
+.ceo-name{font-size:12px;color:var(--ink-soft);}
+.ceo-name b{display:block;font-size:16px;color:var(--ink);}
+.ceo-msg{font-size:13.5px;}
+.ceo-msg b{color:var(--green-deep);}
+.ceo-history{
+  background:#fff;border-radius:12px;padding:14px 16px;font-size:12.5px;color:var(--ink-soft);
+  border:1px solid var(--line);
+}
+.ceo-history b{color:var(--gold-deep);font-size:15px;}
+/* ============ ⑪プラン ============ */
+.plan{background:#fff;border-radius:16px;padding:22px 18px;margin-bottom:16px;border:1.5px solid var(--line);text-align:center;}
+.plan.osusume{border:3px solid var(--gold);position:relative;background:#FFFCF5;}
+.plan.osusume::before{
+  content:"＼ 長期でお得・選ばれています ／";position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  background:var(--gold);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:3px 16px;white-space:nowrap;
+}
+.plan h4{font-family:"Zen Maru Gothic",sans-serif;font-size:17px;font-weight:900;color:var(--green-deep);margin-bottom:6px;}
+.plan .price{font-size:15px;font-weight:700;}
+.plan .price .n{font-size:36px;font-weight:900;font-family:"Zen Maru Gothic",sans-serif;}
+.plan .royal{font-size:14px;margin-top:4px;font-weight:700;}
+.plan .royal .zero{color:var(--gold);font-size:22px;font-weight:900;}
+.plan .royal .r10{color:var(--ink-soft);}
+.plan p.plan-note{font-size:12px;color:var(--ink-soft);margin-top:8px;}
+/* ============ ⑫流れ ============ */
+.flow{counter-reset:step;}
+.flow-step{
+  background:#fff;border-radius:12px;border:1px solid var(--line);
+  padding:14px 16px 14px 58px;margin-bottom:10px;position:relative;font-size:14px;font-weight:700;
+}
+.flow-step::before{
+  counter-increment:step;content:counter(step);
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  width:32px;height:32px;border-radius:50%;background:var(--green-deep);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Zen Maru Gothic",sans-serif;font-weight:900;font-size:15px;
+}
+.flow-step small{display:block;font-size:11.5px;font-weight:400;color:var(--ink-soft);}
+.flow-step.first{border:2px solid var(--cta);}
+.flow-step.first b{color:var(--cta-deep);}
+/* ============ ⑬FAQ（アコーディオン） ============ */
+details.faq{background:#fff;border-radius:12px;border:1px solid var(--line);margin-bottom:12px;overflow:hidden;}
+details.faq summary{
+  list-style:none;cursor:pointer;position:relative;
+  padding:16px 46px 16px 46px;font-size:14px;font-weight:900;color:var(--green-deep);line-height:1.6;
+}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::before{
+  content:"Q";position:absolute;left:16px;top:18px;color:#fff;background:var(--green-mid);
+  width:20px;height:20px;border-radius:6px;font-size:12px;display:flex;align-items:center;justify-content:center;
+}
+details.faq summary::after{
+  content:"＋";position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  width:26px;height:26px;border-radius:50%;background:var(--green-soft);color:var(--green-deep);
+  font-size:16px;font-weight:900;display:flex;align-items:center;justify-content:center;
+}
+details.faq[open] summary::after{content:"−";background:var(--green-deep);color:#fff;}
+details.faq[open] summary{border-bottom:1px dashed var(--line);}
+details.faq .a{font-size:13px;color:var(--ink-soft);padding:14px 16px 16px 46px;position:relative;}
+details.faq .a::before{content:"A";position:absolute;left:16px;top:16px;color:#fff;background:var(--gold);
+  width:20px;height:20px;border-radius:6px;font-size:12px;display:flex;align-items:center;justify-content:center;}
+details.faq .a b{color:var(--ink);}
+/* ============ ⑭フォーム ============ */
+.form-box{background:#fff;border-radius:16px;padding:24px 20px;border:1px solid var(--line);color:var(--ink);text-align:center;}
+.form-box .form-row{text-align:left;}
+.form-row{margin-bottom:16px;}
+.form-row label{display:block;font-size:13px;font-weight:700;margin-bottom:5px;color:var(--ink);}
+.req{background:var(--alert);color:#fff;font-size:10px;border-radius:4px;padding:1px 7px;margin-left:6px;vertical-align:1px;}
+.opt{background:#B9B6AD;color:#fff;font-size:10px;border-radius:4px;padding:1px 7px;margin-left:6px;vertical-align:1px;}
+.fake-input{background:#F4F6F5;border:1px solid var(--line);border-radius:8px;height:44px;}
+.fake-select{
+  background:#F4F6F5;border:1px solid var(--line);border-radius:8px;height:44px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 14px;font-size:13.5px;color:#8B958F;
+}
+.fake-select::after{content:"▼";font-size:11px;color:var(--green-mid);}
+.radio-row{display:flex;gap:10px;}
+.radio-pill{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  border:1.5px solid var(--line);border-radius:10px;height:46px;
+  font-size:14px;font-weight:700;color:var(--ink);background:#F9FAF9;
+}
+.radio-pill::before{
+  content:"";width:16px;height:16px;border-radius:50%;border:2px solid #B9C4BE;background:#fff;
+}
+.radio-pill.on{border-color:var(--green-deep);background:var(--green-soft);color:var(--green-deep);}
+.radio-pill.on::before{border:5px solid var(--green-deep);}
+.form-box .cta-btn{max-width:340px;margin-left:auto;margin-right:auto;}
+.doc-preview{display:flex;gap:8px;margin-bottom:18px;}
+.doc-preview .ph{flex:1;height:110px;}
+.form-lead{text-align:center;font-size:14px;font-weight:700;margin-bottom:16px;line-height:1.9;}
+.form-lead .free{color:var(--cta-deep);font-size:20px;font-weight:900;}
+footer.lp-footer{background:var(--green-deep);color:#fff;text-align:center;font-size:11px;padding:20px;}
+/* 追従CTA表現 */
+.sticky-note{
+  background:#41403B;color:#fff;text-align:center;font-size:12px;padding:12px;
+}
+.doc-end{max-width:920px;margin:48px auto 80px;padding:0 24px;font-size:12.5px;color:var(--ink-soft);}
+@media(max-width:520px){
+  .fv h3.fv-copy{font-size:22px;}
+  .fv h3.fv-copy .zero{font-size:36px;}
+  .fv h3.fv-copy .money{font-size:32px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= ドキュメントヘッダー ================= -->
+<div class="doc-head">
+  <h1>FC加盟店募集LP　ワイヤーフレーム（構成案 v1）</h1>
+  <p class="meta">株式会社eito.ct様｜副業マッチングFC 加盟店募集｜Meta広告用LP｜2026.07 作成：デジタルマーケティングジャパン</p>
+  <div class="legend">
+    <span class="chip">凡例</span>
+    中央の白いエリアが<b>実際のLPイメージ（スマホ幅想定）</b>です。文字サイズ・色・下線は本番の強調イメージを反映しています。
+    グレーの斜線ボックスは<b>写真・図版のプレースホルダ</b>、LPの外にあるグレー帯は<b>制作メモ（LPには載りません）</b>です。<br>
+    強調ルール：<b style="color:#1E5C4C;">緑＝安心・リスクゼロ系</b>／<b style="color:#C4862A;">金茶＝収益・数字系</b>／<b style="color:#E8813A;">オレンジ＝CTA</b>。トンマナは「穏やか・誠実」で統一し、赤の煽り表現は悩みセクションのみ最小限に使用。
+  </div>
+</div>
+
+<!-- ================= ① FV ================= -->
+<div class="sec-label">
+  <span class="num">SEC 01</span><h2>ファーストビュー</h2>
+  <p class="purpose">目的：3秒で「リスクの低さ×収益性」を伝え、スクロールとCVの両方を促す</p>
+</div>
+<div class="lp">
+  <section class="fv">
+    <p class="recruit-ribbon">＼ FCオーナー大募集中 ／</p>
+    <div class="fv-points">
+      <span>在庫なし</span><span>店舗なし</span><span>従業員なし</span><span>スキル不要</span>
+    </div>
+    <h3 class="fv-copy">
+      固定費<span class="zero">0円</span>で続ける<br>
+      副業マッチング<span class="fc">FC</span>
+    </h3>
+    <p class="fv-profit">年間利益<span class="money">3,000<span class="unit">万円</span></span>も可能</p>
+    <div class="badge3">
+      <span>副業が初めての方に<br>おすすめの<br>副業新サービス<br>No.1</span>
+      <span>3冠バッジ②<br>（実データ<br>差し替え）</span>
+      <span>3冠バッジ③<br>（実データ<br>差し替え）</span>
+    </div>
+    <div class="ph" style="height:150px;">写真：穏やかな50代男性オーナーの<br>笑顔イメージ（or 保科様写真）</div>
+  </section>
+  <div class="cta-wrap">
+    <p class="cta-micro">＼ 10秒で入力完了・しつこい営業はいたしません ／</p>
+    <a class="cta-btn" href="javascript:void(0)">無料で資料を受け取る<small>事業の仕組み・収益実績がわかる資料をお届けします</small></a>
+  </div>
+</div>
+<p class="note"><b>制作メモ：</b>3冠バッジは<b>LPのみ使用可（広告バナー使用NG）</b>。テキストは現行の3冠文言を流用しデザインのみリニューアル。「年間利益3,000万円も可能」はご指示により注釈なしで掲載（景表法・Meta広告審査の観点で指摘が入った場合は注釈追加で対応できるよう、注釈文言は控えとして保持）。FV写真はいただく素材次第で保科様写真かフリー素材か判断。</p>
+
+<!-- ================= ② 悩み共感 ================= -->
+<div class="sec-label">
+  <span class="num">SEC 02</span><h2>共感（お悩み）セクション</h2>
+  <p class="purpose">目的：ターゲット（40〜50代・決裁者本人）の状況を言語化し「自分ごと化」させる</p>
+</div>
+<div class="lp">
+  <section class="lp-sec bg-cream">
+    <span class="eyebrow">CHECK</span>
+    <h3 class="lp-h">こんなお悩み、<br>ありませんか？</h3>
+    <div class="worry-list">
+      <div class="worry">本業の売上が<b>頭打ち</b>。もう1本、収益の柱がほしい</div>
+      <div class="worry">早期退職したが、<b>特別なスキルがない</b>。何から始めれば…</div>
+      <div class="worry">店舗系フランチャイズは<b>初期投資が高すぎて</b>手が出ない</div>
+      <div class="worry">在庫・家賃・人件費などの<b>固定費リスク</b>が怖い</div>
+      <div class="worry">正直、<b>怪しい儲け話</b>には二度と関わりたくない</div>
+    </div>
+    <div class="arrow-down"></div>
+    <p class="worry-answer">そのお悩み、<br><span class="big">固定費0円の副業マッチング事業</span>が<br>解決します。</p>
+  </section>
+</div>
+<p class="note"><b>制作メモ：</b>最後の1項目「怪しい儲け話〜」は、コンサル被害経験層への先回り共感（ヒアリングより）。ここで拾っておくことで⑨⑩の信頼セクションが効きます。</p>
+
+<!-- ================= ③ 仕組み図解 ================= -->
+<div class="sec-label">
+  <span class="num">SEC 03</span><h2>サービス概要（ビジネスモデル図解）</h2>
+  <p class="purpose">目的：ITリテラシーが高くない層でも「収益が生まれる仕組み」を図1枚で理解させる（面談化率のボトルネック解消。本LPの生命線）</p>
+</div>
+<div class="lp">
+  <section class="lp-sec">
+    <span class="eyebrow">ABOUT</span>
+    <h3 class="lp-h">どうして<span class="u">スキルなし</span>で<br>収益が生まれるの？</h3>
+    <p style="font-size:14px;text-align:center;margin-bottom:20px;">
+      仕組みはシンプル。<b style="color:var(--green-deep);">「副業をしたい人」</b>と<b style="color:var(--green-deep);">「働き手を探す企業」</b>を、あなたが<b style="background:linear-gradient(transparent 62%,#F5D9A8 62%);">おつなぎするだけ</b>。<br>
+      おつなぎした企業から<b style="color:var(--gold-deep);">紹介料</b>が支払われます。
+    </p>
+    <div class="scheme">
+      <div class="scheme-row">
+        <div class="scheme-box">副業したい人<br><small style="font-weight:400;">（ユーザー）</small></div>
+        <div class="scheme-arrow">⇄</div>
+        <div class="scheme-box you">あなた<br><small style="font-weight:400;">（加盟オーナー）</small></div>
+        <div class="scheme-arrow">⇄</div>
+        <div class="scheme-box">案件企業<br><small style="font-weight:400;">（本部が用意）</small></div>
+      </div>
+      <p class="scheme-money">紹介1件ごとに <span class="y">紹介料</span> があなたの売上に</p>
+      <p class="scheme-cap">図版：3者の関係とお金の流れを1枚のイラストで表現（矢印アニメーション検討）</p>
+    </div>
+    <p style="font-size:13px;text-align:center;margin-top:18px;color:var(--ink-soft);">
+      案件の開拓・ユーザーへの説明・サポート・報酬支払いは<br><b style="color:var(--green-deep);font-size:15px;">すべて本部と案件企業が対応</b>。<br>だから、はじめてでも安心です。
+    </p>
+  </section>
+</div>
+<p class="note"><b>制作メモ：</b>「仕組みのイメージが湧かず面談に至らない」が既存LPの最大課題（ヒアリング確定事項）。図版はデザイナー制作のオリジナルイラストで、専門用語（マッチング／スキーム等）を使わず表現します。</p>
+
+<!-- ================= ④ 選ばれる理由 ================= -->
+<div class="sec-label">
+  <span class="num">SEC 04</span><h2>選ばれる4つの理由</h2>
+  <p class="purpose">目的：USP（固定費0円・案件提供・省時間・サポート）を整理して提示</p>
+</div>
+<div class="lp">
+  <section class="lp-sec bg-soft">
+    <span class="eyebrow">REASON</span>
+    <h3 class="lp-h">この副業マッチングが<br><span class="u">選ばれる理由</span></h3>
+    <div class="reason">
+      <div class="r-num">1</div>
+      <div><h4>固定費<em>0円</em>。だから低リスク</h4>
+      <p>店舗・在庫・従業員は一切不要。<b>毎月の支払いに追われない</b>から、じっくり事業を育てられます。</p>
+      <div class="ph reason-ph">イラスト/実写：店舗・在庫・人件費が「不要」のイメージ</div></div>
+    </div>
+    <div class="reason">
+      <div class="r-num">2</div>
+      <div><h4>案件は本部が<em>500件以上</em>ご用意</h4>
+      <p>常時<b>約50ジャンル・500件以上</b>。あなたが企業に営業する必要はありません。</p>
+      <div class="ph reason-ph">イラスト/実写：案件一覧・豊富さのイメージ</div></div>
+    </div>
+    <div class="reason">
+      <div class="r-num">3</div>
+      <div><h4>作業は<em>スキマ時間</em>でOK</h4>
+      <p>日々の作業は集客とおつなぎ作業のみ。<b>1日1時間からスタート</b>できます。</p>
+      <div class="ph reason-ph">イラスト/実写：スマホ片手にスキマ時間で作業するイメージ</div></div>
+    </div>
+    <div class="reason">
+      <div class="r-num">4</div>
+      <div><h4>集客ノウハウも<em>人脈</em>もご提供</h4>
+      <p>SNS集客を個別レクチャー。人脈がない方には<b>集客協力者のご紹介</b>も可能です。</p>
+      <div class="ph reason-ph">イラスト/実写：レクチャー・サポートを受けるイメージ</div></div>
+    </div>
+  </section>
+  <div class="cta-wrap">
+    <a class="cta-btn" href="javascript:void(0)">無料で資料を受け取る<small>加盟金・収益実績も資料でご確認いただけます</small></a>
+  </div>
+</div>
+
+<!-- ================= ⑤ 仕事内容 ================= -->
+<div class="sec-label">
+  <span class="num">SEC 05</span><h2>1日の仕事内容（やることは2つだけ）</h2>
+  <p class="purpose">目的：「自分にもできそう」の醸成。本部代行分を打ち消し線で見せ、負担の軽さを可視化</p>
+</div>
+<div class="lp">
+  <section class="lp-sec bg-cream">
+    <span class="eyebrow">WORK</span>
+    <h3 class="lp-h">あなたは<br><span class="u">副業したい人を集めるだけ</span></h3>
+    <div class="work3">
+      <div class="work hq">
+        <span class="tag">本部が対応</span>
+        <h4>① 案件企業の開拓営業</h4>
+        <p><b>本部がすべてご用意</b>するので、あなたは一切行う必要がありません。</p>
+      </div>
+      <div class="work you">
+        <span class="time-badge">1日 約1時間〜</span>
+        <span class="tag">あなたの仕事</span>
+        <h4>② 副業したい人を集める</h4>
+        <p>SNS（Instagram・X・Threads）の投稿、または1日1件のオンライン面談。</p>
+        <div class="ph work-ph">イラスト：SNS投稿／オンライン面談で人が集まるイメージ</div>
+        <p class="work-cap">「どうやって集めるの？」もご安心ください。<b>集め方のノウハウは、すべて本部が共有します。</b></p>
+      </div>
+      <div class="work you">
+        <span class="time-badge">スキマ時間でOK</span>
+        <span class="tag">あなたの仕事</span>
+        <h4>③ LINEでおつなぎする</h4>
+        <p>連絡が来たら、<b>LINEで案件企業の担当者につなぐだけ。</b>その後の説明・サポート・報酬支払いはすべて案件企業が行います。</p>
+        <div class="ph work-ph">イラスト：LINEで「おつなぎするだけ」のイメージ</div>
+        <p class="work-cap"><b>案件企業から相談が届くので、副業人材をご紹介するだけ。</b>難しい調整や交渉は必要ありません。</p>
+      </div>
+    </div>
+    <p class="work-sum">移動時間・待ち時間も、<br>そのまま<span class="n">収益時間</span>に。</p>
+  </section>
+</div>
+<p class="note"><b>制作メモ：</b>店舗兼業層（例：買取店オーナー）にも刺さる締めコピーにしています。①を打ち消し線で見せる対比構成は本部にすり合わせ済みの方向性（3業務のうち①は本部代行）。②③のイラストはオリジナル制作。</p>
+
+<!-- ================= ⑥ 収益実績 ================= -->
+<div class="sec-label">
+  <span class="num">SEC 06</span><h2>収益実績・シミュレーション</h2>
+  <p class="purpose">目的：仕事内容を理解させた直後に「結局いくら儲かるのか」へ定量実績で回答（FC広告の最重要フック）</p>
+</div>
+<div class="lp">
+  <section class="lp-sec">
+    <span class="eyebrow">INCOME</span>
+    <h3 class="lp-h">スキマ時間稼働で<br>年間利益<span style="color:var(--gold);font-size:34px;">3,000万円</span>も可能</h3>
+    <div class="income-card">
+      <span class="cond">1日 約1時間 の副業人材集め</span>
+      <p class="val">初年度 年間利益 <span class="n">300</span><span class="unit">万円</span></p>
+    </div>
+    <div class="income-card">
+      <span class="cond">1日 約3時間 の副業人材集め</span>
+      <p class="val">初年度 年間利益 <span class="n">1,200</span><span class="unit">万円</span>〜</p>
+    </div>
+    <div class="income-card top">
+      <span class="cond">継続的に取り組んだ加盟店</span>
+      <p class="val">年間利益 <span class="n">3,000</span><span class="unit">万円</span></p>
+    </div>
+    <div class="ph graph-ph">グラフ：加盟店の利益推移<br>（本部提供PDFの実績グラフ2点を<br>デザインリメイクして掲載）</div>
+    <p class="income-note">※いずれも実際の実績に基づきます。成果を保証するものではなく、取り組み時間・活動内容により異なります。</p>
+  </section>
+</div>
+<p class="note"><b>制作メモ：</b>「過去最高3,000万円」の表記は加盟店実績としての掲載可否を<b>本部に最終確認</b>のうえFIX（ヒアリング時点の把握値は加盟店最高2,000万円・本部3,000万円のため）。「保証」ではなく「実績」の見せ方で統一し、注記を必ず併記。グラフは提供PDFの2・3個目のグラフを使用予定。</p>
+
+<!-- ================= ⑦ 案件例 ================= -->
+<div class="sec-label">
+  <span class="num">SEC 07</span><h2>ご紹介できる案件例</h2>
+  <p class="purpose">目的：事業の具体性・実在性を担保し「案件が枯れない」安心につなげる</p>
+</div>
+<div class="lp">
+  <section class="lp-sec">
+    <span class="eyebrow">CONTENTS</span>
+    <h3 class="lp-h">人材数・期間の<span class="u">縛りがない案件</span>が<br><span style="font-size:38px;color:var(--gold);">500</span>以上</h3>
+    <p class="carousel-hint">← 横にスワイプして案件例をご覧いただけます →</p>
+    <div class="carousel">
+      <!-- 1 -->
+      <div class="jcard">
+        <div class="jcard-img">
+          <div class="ph">実写：口座開設をスマホで<br>申し込む男性</div>
+          <span class="jcard-badge">高単価</span>
+          <span class="jcard-feature">申し込むだけで完了</span>
+        </div>
+        <div class="jcard-body">
+          <p class="jcard-title">FX口座開設サポート案件（セルフバック型）</p>
+          <div class="jrow"><span class="k">ジャンル</span><span class="v">金融・セルフバック</span></div>
+          <div class="jrow"><span class="k">内容</span><span class="v">ユーザーは口座開設を申し込むだけ。作業負担なし</span></div>
+          <div class="jrow"><span class="k">報酬目安</span><span class="v pay">◯万円／件</span></div>
+          <div class="jtags"><span>在宅OK</span><span>スキマ時間</span><span>人数制限なし</span></div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="jcard">
+        <div class="jcard-img">
+          <div class="ph">実写：オンライン面談を<br>受けるビジネスパーソン</div>
+          <span class="jcard-badge">高単価</span>
+          <span class="jcard-feature">提携企業が全面サポート</span>
+        </div>
+        <div class="jcard-body">
+          <p class="jcard-title">正社員・転職支援案件</p>
+          <div class="jrow"><span class="k">ジャンル</span><span class="v">人材紹介</span></div>
+          <div class="jrow"><span class="k">内容</span><span class="v">転職を考える方を提携の転職支援企業へおつなぎ</span></div>
+          <div class="jrow"><span class="k">報酬目安</span><span class="v pay">◯万円／件</span></div>
+          <div class="jtags"><span>1件の単価大</span><span>期間制限なし</span></div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="jcard">
+        <div class="jcard-img">
+          <div class="ph">実写：店舗オーナーとの<br>商談・握手シーン</div>
+          <span class="jcard-badge">法人向け</span>
+          <span class="jcard-feature">経費削減・集客支援</span>
+        </div>
+        <div class="jcard-body">
+          <p class="jcard-title">法人・店舗向け紹介案件</p>
+          <div class="jrow"><span class="k">ジャンル</span><span class="v">法人サポート</span></div>
+          <div class="jrow"><span class="k">内容</span><span class="v">経費削減や集客支援を法人・店舗オーナーへご紹介</span></div>
+          <div class="jrow"><span class="k">報酬目安</span><span class="v pay">◯万円／件</span></div>
+          <div class="jtags"><span>1件の単価大</span><span>人数制限なし</span></div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="jcard">
+        <div class="jcard-img">
+          <div class="ph">実写：サロン・店舗で<br>体験を受ける女性</div>
+          <span class="jcard-badge bl">定番人気</span>
+          <span class="jcard-feature">体験するだけ</span>
+        </div>
+        <div class="jcard-body">
+          <p class="jcard-title">来店モニター案件</p>
+          <div class="jrow"><span class="k">ジャンル</span><span class="v">モニター</span></div>
+          <div class="jrow"><span class="k">内容</span><span class="v">お店を訪問して説明を聞いたり体験したりするだけ</span></div>
+          <div class="jrow"><span class="k">報酬目安</span><span class="v pay">4,000円／件<span style="font-size:10px;font-weight:500;color:var(--ink-soft);">（翌月お支払い）</span></span></div>
+          <div class="jtags"><span>気軽に参加</span><span>はじめてOK</span></div>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="jcard">
+        <div class="jcard-img">
+          <div class="ph">実写：自宅でヘッドセットを<br>つけて働く女性</div>
+          <span class="jcard-badge bl">募集中</span>
+          <span class="jcard-feature">完全在宅OK</span>
+        </div>
+        <div class="jcard-body">
+          <p class="jcard-title">在宅テレアポ案件</p>
+          <div class="jrow"><span class="k">ジャンル</span><span class="v">在宅ワーク</span></div>
+          <div class="jrow"><span class="k">内容</span><span class="v">自宅でできる架電のお仕事。主婦・会社員の副業に人気</span></div>
+          <div class="jrow"><span class="k">報酬目安</span><span class="v pay">◯円／件</span></div>
+          <div class="jtags"><span>在宅OK</span><span>時間の融通◎</span></div>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="jcard">
+        <div class="jcard-img">
+          <div class="ph">実写：家計・経費を見直して<br>笑顔になる夫婦</div>
+          <span class="jcard-badge bl">おトク</span>
+          <span class="jcard-feature">使うだけで節約に</span>
+        </div>
+        <div class="jcard-body">
+          <p class="jcard-title">固定費削減サポート案件</p>
+          <div class="jrow"><span class="k">ジャンル</span><span class="v">生活サポート</span></div>
+          <div class="jrow"><span class="k">内容</span><span class="v">ユーザー自身が使うことで固定費が下がるサポート系</span></div>
+          <div class="jrow"><span class="k">報酬目安</span><span class="v pay">◯円／件</span></div>
+          <div class="jtags"><span>紹介しやすい</span><span>喜ばれやすい</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="case-total">こうした案件が 常時<span class="n">50</span>ジャンル・<span class="n">500</span>件以上<small>しかも、すべて人数・期間の制限なし。案件が「枯れる」心配がありません。</small></p>
+  </section>
+  <div class="cta-wrap">
+    <p class="cta-micro">＼ 案件の詳しい内容は資料でご覧いただけます ／</p>
+    <a class="cta-btn" href="javascript:void(0)">無料で資料を受け取る<small>10秒で入力完了</small></a>
+  </div>
+</div>
+<p class="note"><b>制作メモ：</b>実在感を高め「怪しさ」を払拭するため、求人サイト風の写真付きカードカルーセル（6枚・横スワイプ）に変更。高単価3ジャンル（金融セルフバック／人材紹介／法人向け）＋親しみやすい定番3ジャンル（モニター／在宅テレアポ／固定費サポート）の構成で、単価の高さと始めやすさを両立して見せます。写真は実写ストック素材を使用。<b>報酬目安の金額（◯部分）と各案件の表現可否は本部確認必須</b>（特に金融系は「◯◯したらいくらもらえる」型の断定表現がNGとヒアリング済み）。来店モニターの4,000円は本部言及済みの数値です。</p>
+
+<!-- ================= ⑧ IT不安の解消 ================= -->
+<div class="sec-label">
+  <span class="num">SEC 08</span><h2>「ITが苦手でも大丈夫」セクション</h2>
+  <p class="purpose">目的：コアターゲット最大の不安（自分にできるのか）を解消</p>
+</div>
+<div class="lp">
+  <section class="lp-sec bg-soft">
+    <span class="eyebrow">SUPPORT</span>
+    <h3 class="lp-h">パソコンが苦手でも、<br><span class="u">大丈夫です</span></h3>
+    <div class="it-need">
+      <div>LINE<small>が使えれば</small></div>
+      <div>Zoom<small>ができれば</small></div>
+    </div>
+    <p class="it-copy">必要なのは、この2つだけ。<br><span class="big">難しいツールも、専門知識もいりません。</span><br>実際に、パソコンが得意でない方こそ<br>多くご加盟いただいています。</p>
+    <div class="lecture">ご加盟後は <b>個別レクチャーを5回</b> 実施。<br>集客のやり方から日々の作業まで、代表が直接、丁寧にお教えします。</div>
+  </section>
+</div>
+
+<!-- ================= ⑨ 加盟店の声 ================= -->
+<div class="sec-label">
+  <span class="num">SEC 09</span><h2>加盟オーナーの声</h2>
+  <p class="purpose">目的：同世代・同属性の第三者の声で信頼を担保（穏やかな人柄の空気感を演出）</p>
+</div>
+<div class="lp">
+  <section class="lp-sec bg-cream">
+    <span class="eyebrow">VOICE</span>
+    <h3 class="lp-h">加盟オーナーの声</h3>
+    <div class="voice">
+      <div class="voice-head">
+        <div class="ph">写真</div>
+        <div class="who"><b>50代・男性オーナー（元会社員）</b>加盟◯年目｜<span class="res">年間利益 ◯◯◯万円</span></div>
+      </div>
+      <p>「特別なスキルは何もありませんでしたが、<b>教わった通りに進めるだけ</b>で形になりました。固定費がないので、焦らず取り組めるのが一番ありがたいです。」</p>
+    </div>
+    <div class="voice">
+      <div class="voice-head">
+        <div class="ph">写真</div>
+        <div class="who"><b>40代・男性オーナー（店舗経営と兼業）</b>加盟◯年目｜<span class="res">年間利益 ◯◯◯万円</span></div>
+      </div>
+      <p>「本業の店舗の<b>空き時間だけで運営</b>しています。お客様がいない時間が、そのまま2本目の売上になりました。」</p>
+    </div>
+    <div class="voice">
+      <div class="voice-head">
+        <div class="ph">写真</div>
+        <div class="who"><b>加盟店 Ekiさま（実名レビュー）</b></div>
+      </div>
+      <p>「加盟前は正直不安もありましたが、<b>レクチャーが想像以上に丁寧</b>で安心しました。」（加盟店レビュー記事へのリンクを設置）</p>
+    </div>
+  </section>
+</div>
+<p class="note"><b>制作メモ：</b>写真は本部HP掲載分を使用可（女性カメラマンの方を除く）。<b>写真と実績数値の紐付け方（紐付ける／実績と人物を分けて見せる）は構成確認時に本部に最終判断いただく</b>事項です。コメントは仮コピーのため、実レビューをもとに差し替えます。</p>
+
+<!-- ================= ⑩ 代表メッセージ ================= -->
+<div class="sec-label">
+  <span class="num">SEC 10</span><h2>代表メッセージ</h2>
+  <p class="purpose">目的：成約理由の上位「保科様の人柄」を情緒面から訴求。怪しさの完全払拭</p>
+</div>
+<div class="lp">
+  <section class="lp-sec">
+    <span class="eyebrow">MESSAGE</span>
+    <h3 class="lp-h">代表よりご挨拶</h3>
+    <div class="ceo">
+      <div class="ph">保科様<br>宣材写真</div>
+      <div>
+        <p class="ceo-name">株式会社eito.ct 代表<b>保科 拓也</b></p>
+        <p class="ceo-msg" style="margin-top:8px;">「私がこの事業で大切にしているのは、<b>数を増やすことではなく、案件を精査すること</b>。本当に良いものだけを、加盟オーナーの皆さまとそのユーザーさまにお届けしたいと考えています。」</p>
+      </div>
+    </div>
+    <p class="ceo-msg" style="margin-bottom:16px;">「派手さはありませんが、<b>14年間この事業と向き合ってきました</b>。穏やかで誠実な方々にご加盟いただき、長くお付き合いできることが何よりの喜びです。まずは資料だけでも、お気軽にご覧ください。」</p>
+    <div class="ceo-history">事業歴 <b>14年</b>｜本部実績：年間利益 <b>3,000万円以上</b>｜案件精査を最重視する運営方針</div>
+  </section>
+</div>
+
+<!-- ================= ⑪ 加盟プラン ================= -->
+<div class="sec-label">
+  <span class="num">SEC 11</span><h2>加盟プラン（料金）</h2>
+  <p class="purpose">目的：加盟金を明示して面談の質を担保しつつ、300万円プランへ自然に誘導（本部意向）</p>
+</div>
+<div class="lp">
+  <section class="lp-sec bg-soft">
+    <span class="eyebrow">PLAN</span>
+    <h3 class="lp-h">加盟プランは<br>2つからお選びいただけます</h3>
+    <div class="plan">
+      <h4>スタンダードプラン</h4>
+      <p class="price">加盟金 <span class="n">130</span>万円<span style="font-size:12px;">（税別表記は要確認）</span></p>
+      <p class="royal"><span class="r10">ロイヤリティ：売上の10%（最初の3年間）</span></p>
+    </div>
+    <div class="plan osusume">
+      <h4>プレミアムプラン</h4>
+      <p class="price">加盟金 <span class="n" style="color:var(--gold);">300</span>万円</p>
+      <p class="royal">ロイヤリティ <span class="zero">0円</span>（ずっと）</p>
+      <p class="plan-note">売上が伸びるほどおトクに。長く続ける方に選ばれています。</p>
+    </div>
+    <div class="ph" style="height:150px;">グラフ：2プランの累計手残り比較<br>（◯年目でプレミアムが逆転する構図を可視化）</div>
+    <p style="font-size:11px;color:var(--ink-soft);text-align:center;margin-top:10px;">※比較シミュレーションの前提条件を注記で明示します。</p>
+  </section>
+</div>
+<p class="note"><b>制作メモ：</b>2プラン並記は本部の必須要望。300万円プランを「おすすめ」枠＋累計手残り比較グラフで訴求し、途中変更不可の運用実態に沿って<b>最初からプレミアムを選ぶ動機</b>を作ります。税込/税別表記は要確認。</p>
+
+<!-- ================= ⑫ 加盟までの流れ ================= -->
+<div class="sec-label">
+  <span class="num">SEC 12</span><h2>加盟までの流れ</h2>
+  <p class="purpose">目的：CVハードルを下げる（「まずは資料請求だけ」を明示）</p>
+</div>
+<div class="lp">
+  <section class="lp-sec">
+    <span class="eyebrow">FLOW</span>
+    <h3 class="lp-h">スタートまでの流れ</h3>
+    <div class="flow">
+      <div class="flow-step first"><b>無料の資料請求</b><small>まずはここまででOK。資料を見て検討いただくだけでも歓迎です。</small></div>
+      <div class="flow-step">個別面談（オンライン30分〜）<small>疑問点になんでもお答えします。無理な勧誘はいたしません。</small></div>
+      <div class="flow-step">ご契約（クラウドサイン）<small>電子契約なので来社不要です。</small></div>
+      <div class="flow-step">個別レクチャー（全5回）<small>代表が直接、事業の進め方をお教えします。</small></div>
+      <div class="flow-step">事業スタート<small>最短で加盟後すぐに開始できます。</small></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ⑬ FAQ ================= -->
+<div class="sec-label">
+  <span class="num">SEC 13</span><h2>よくあるご質問</h2>
+  <p class="purpose">目的：面談前の離脱要因（案件枯渇・人脈・IT・収益不安）を先回りで解消</p>
+</div>
+<div class="lp">
+  <section class="lp-sec bg-cream">
+    <span class="eyebrow">FAQ</span>
+    <h3 class="lp-h">よくあるご質問</h3>
+    <details class="faq" open>
+      <summary>加盟店が増えたら、案件を取り合いになりませんか？</summary>
+      <p class="a">なりません。ご紹介する案件はすべて<b>人数・期間の制限がないもののみ</b>を厳選しています。何名が取り組んでも案件がなくなることはありません。</p>
+    </details>
+    <details class="faq">
+      <summary>人脈がなくても始められますか？</summary>
+      <p class="a">はい。SNSでの集客方法をレクチャーするほか、ご希望の方には<b>集客に協力いただける方のご紹介</b>も行っています。</p>
+    </details>
+    <details class="faq">
+      <summary>パソコンやSNSが苦手なのですが…</summary>
+      <p class="a">LINEとZoomが使えれば問題ありません。実際に<b>ITが得意でない方が多くご加盟</b>されています。</p>
+    </details>
+    <details class="faq">
+      <summary>本当に収益になりますか？</summary>
+      <p class="a">成果はお取り組み次第ですが、<b>1日約1時間の活動で初年度年間利益300万円</b>という実績があります。詳しい実績データは資料でご確認ください。</p>
+    </details>
+    <details class="faq">
+      <summary>資料請求をしたら、しつこく営業されませんか？</summary>
+      <p class="a">いたしません。資料をご覧いただき、<b>ご興味を持っていただけた場合のみ</b>面談をご案内しています。</p>
+    </details>
+  </section>
+</div>
+
+<!-- ================= ⑭ フォーム ================= -->
+<div class="sec-label">
+  <span class="num">SEC 14</span><h2>資料請求フォーム（CV）</h2>
+  <p class="purpose">目的：入力4項目・資料プレビューでCVRを最大化。CPA目標：資料請求28,000円以下</p>
+</div>
+<div class="lp">
+  <section class="lp-sec bg-deep" id="form">
+    <h3 class="lp-h">無料資料のお申し込み</h3>
+    <p class="form-lead" style="color:#fff;">事業の仕組み・収益実績・加盟プランがわかる資料を<br><span class="free">無料</span>でお届けします（入力は<b>約10秒</b>）</p>
+    <div class="doc-preview">
+      <div class="ph">資料<br>表紙</div>
+      <div class="ph">収益実績<br>ページ</div>
+      <div class="ph">事業説明<br>ページ</div>
+    </div>
+    <div class="form-box">
+      <div class="form-row"><label>お申込者<span class="req">必須</span></label>
+        <div class="radio-row">
+          <div class="radio-pill on">個人様</div>
+          <div class="radio-pill">法人様</div>
+        </div>
+      </div>
+      <div class="form-row"><label>お名前<span class="req">必須</span></label><div class="fake-input"></div></div>
+      <div class="form-row"><label>会社名<span class="opt">任意</span></label><div class="fake-input"></div><small style="font-size:11px;color:var(--ink-soft);">個人の方は空欄で構いません</small></div>
+      <div class="form-row"><label>都道府県<span class="req">必須</span></label><div class="fake-select">選択してください</div></div>
+      <div class="form-row"><label>電話番号<span class="req">必須</span></label><div class="fake-input"></div></div>
+      <div class="form-row"><label>メールアドレス<span class="req">必須</span></label><div class="fake-input"></div><small style="font-size:11px;color:var(--ink-soft);">キャリアメールは届かない場合があります。Gmail等をご入力ください</small></div>
+      <a class="cta-btn" href="javascript:void(0)" style="margin-top:10px;">無料で資料を受け取る</a>
+      <p class="cta-sub" style="text-align:center;">個人情報保護方針に同意の上お申し込みください</p>
+    </div>
+  </section>
+  <footer class="lp-footer">株式会社eito.ct｜特定商取引法に基づく表記｜プライバシーポリシー</footer>
+  <div class="sticky-note">▼ 画面下部に追従CTAボタン「無料で資料をダウンロード」を常時表示（全セクション共通）</div>
+</div>
+<p class="note"><b>制作メモ：</b>項目は6項目（お申込者[個人/法人]・お名前・会社名[任意]・都道府県[選択式]・電話番号・メールアドレス）。当初合意の4項目から拡張しているため、CVRへの影響と本部承認を確認のうえFIX。送信後はサンクスページ→サンクスメール（PDF資料リンク＋note案内）→即架電の運用フローに接続。</p>
+
+<!-- ================= ドキュメント末尾 ================= -->
+<div class="doc-end">
+  <p><b>今後の進め方：</b>本ワイヤーをご確認いただき、①各コピーの表現可否（特にSEC05の数値・SEC07の案件表現・SEC09の写真と実績の紐付け方）、②3冠バッジ実データ、③加盟金の税表記、をご確定ください。ご承認後、デザインカンプ（Figma）に展開し、7/29のLP FIXに向けて進行します。</p>
+</div>
+
+</body>
+</html>
